@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginToMagento',()=> {
+    
+    cy.visit("/customer/account/login/");
+    cy.get("#email").type("CypressUser@gmail.com");
+    cy.get("#pass").type("test@123");
+    cy.get("#send2").click();
+})
+
+Cypress.Commands.add('Login', ()=> {
+    cy.visit("https://admin-demo.nopcommerce.com/login");
+    cy.get("#Email").clear().type("admin@yourstore.com");
+    cy.get("#Password").clear().type("admin");
+    cy.get(".login-button").click();
+})

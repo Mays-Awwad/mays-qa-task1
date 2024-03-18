@@ -1,1 +1,4 @@
 node_modules
+e2e/parctices.cy.js
+e2e/cartfunctionality.cy.js
+e2e/task1.cy.js
